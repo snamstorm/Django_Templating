@@ -5,7 +5,11 @@ The following are steps to take after Django has been installed
 ### Directories to create
 * Add a new directory in your app called 'templates'
 * Add to your <code>settings.py</code>: <code>TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'your_app/templates')]. </code>
+* 
 * Create a python package called <code>templatetags</code> in your application. (For Filters and Tags)
+*  
+* Create a folder in your application called 'static' (Where HTML files live)
+* In your 'static' folder create three folders called 'js', 'css', 'img'
 
 #### Capturing variables in URL Routes
 *URL'S and Regex URL's: add the following code to <code>urls.py</code>
