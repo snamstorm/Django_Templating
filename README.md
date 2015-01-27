@@ -34,13 +34,18 @@ def URL(request, some_variable):
 </body>
 ````
 ### Custom Filters and Tags
-* Create a file in templatetags
+* Create a file in templatetags called <code>some_file.py</code>
 * Add the following code to the file:
 ````python 
 from django import template
 
 register = template.Library()
 
+# recognize this function as a filter
 @register.filter
 def func(condition):
 ````
+* load the filter in your <code>some_file.py</code> by including <code>{% load list_filters %}</code> on the first line
+
+### DRY Templates
+
