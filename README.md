@@ -55,7 +55,7 @@ register = template.Library()
 @register.filter
 def func(condition):
 ````
-* load the filter in your <code>some_file.py</code> by including <code>{% load list_filters %}</code> on the first line
+* load the filter in pages using this filter by including <code>{% load some_file %}</code> on the first line
 
 ### DRY Templates
 
