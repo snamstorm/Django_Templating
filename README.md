@@ -62,11 +62,24 @@ def func(condition):
 * create a new template called header.html
 * In the header template, include (and any other files that need to be run across all pages):
 ````python
-<head>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="{% static 'js/cards.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">
-</head>
+    <head>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="{% static 'js/cards.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">
+    </head>
+
+    <body>
+        <h1>Welcome to our Card Game!</h1>
+        {% block content %}{% endblock content %}
+    </body>
+````
+* Include the header.html file in other files by extension
+````python
+{% extends 'header.html' %}
+
+{% block content %}
+    <p>YOUR HTML TEXT HERE</p>
+{% endblock content %}
 ````
 
 
